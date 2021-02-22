@@ -22,7 +22,7 @@ function fetchResults() {
         let a = document.createElement("a");
         resultList.appendChild(a);
         a.innerHTML = data[i].name + '(' + data[i].symbol + ')';
-        a.setAttribute("href",`/company.html?symbol=${data[i].symbol}`);
+        a.setAttribute("href",`/company/company.html?symbol=${data[i].symbol}`);
         let newItem = document.createElement("li")
         newItem.appendChild(a);
         resultList.appendChild(newItem);
@@ -30,6 +30,4 @@ function fetchResults() {
         }
     });   
 }
-
-
 
