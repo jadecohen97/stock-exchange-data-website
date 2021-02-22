@@ -7,9 +7,6 @@ const stockPrice = document.getElementById("stockPrice");
 const urlParams= new URLSearchParams(window.location.search);
 let symbol = urlParams.get('symbol');
 console.log(symbol);
-// for (let p of symbol) {
-//       console.log(p);
-// }
 
 function fetchProfile(){
     let url = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/${symbol}`;
@@ -27,17 +24,18 @@ let link = document.createElement("a");
 webLink.appendChild(link);
 link.innerHTML = data.profile.website;
 link.setAttribute("href",data.profile.website);
+link.style.color ="black";
 stockPrice.innerText = "Stock Price:" + ' $' + data.profile.price;
 const percChange = document.getElementById("percChange");
 let change = data.profile.changesPercentage;
 percChange.innerHTML = change;
 
-    if (change.includes('+')){
-        percChange.style.color = "red";
+    if (change.includes('-')){
+        percChange.style.color = "rgb(93, 192, 93)";
         console.log(change);
     }
     else {
-        percChange.style.color = "rgb(93, 192, 93)"
+        percChange.style.color = "red"
     }
     
 
