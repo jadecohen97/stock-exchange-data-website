@@ -8,9 +8,10 @@ li {
   color: black;
 }
 
+
 .container {
   width: 470px;
-  height: 440px;
+  height: 450px;
   background-color: rgb(207, 202, 202);
   box-shadow: 10px 10px 5px rgb(53, 52, 52);
 }
@@ -39,10 +40,11 @@ a {
   color: black;
 }
 
+a:hover{
+  color: rgb(206, 50, 50);
+}
+
 #button {
   width: 100px;
   border: 2px solid rgb(94, 92, 92);
-  
 }
-
-

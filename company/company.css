@@ -1,5 +1,5 @@
-body{
-    background-color: rgb(228, 227, 227);
+body {
+  background-color: rgb(228, 227, 227);
 }
 
 .companyName {
@@ -11,8 +11,8 @@ body{
   font-size: 24px;
 }
 
-#logo{
-    margin-right:1vw;
+#logo {
+  margin-right: 1vw;
 }
 
 #description {
@@ -22,7 +22,6 @@ body{
   line-height: 145%;
   letter-spacing: 0.1em;
   font-weight: 200px;
-
 }
 
 .stock {
@@ -33,15 +32,14 @@ body{
   color: rgb(85, 83, 83);
 }
 
-#percChange{
-    margin-left: 0.5vw;
-    font-weight: bold;
+#percChange {
+  margin-left: 0.5vw;
+  font-weight: bold;
 }
 
-.chart-container{
-    position: relative; 
-    height:60vh; 
-    width:60vw;
-    margin: auto;
-  
+.chart-container {
+  position: relative;
+  height: 60vh;
+  width: 60vw;
+  margin: auto;
 }

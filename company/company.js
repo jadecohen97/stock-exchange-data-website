@@ -3,16 +3,13 @@ const logo = document.getElementById("logo");
 const description = document.getElementById("description");
 const webLink = document.getElementById("webLink");
 const stockPrice = document.getElementById("stockPrice");
-
 const urlParams = new URLSearchParams(window.location.search);
 let symbol = urlParams.get("symbol");
-
 function fetchProfile() {
   let url = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/${symbol}`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.profile.companyName);
       companyName.innerHTML = data.profile.companyName;
       const img = document.createElement("img");
       img.src = data.profile.image;
@@ -31,7 +28,6 @@ function fetchProfile() {
 
       if (change.includes("-")) {
         percChange.style.color = "red";
-        console.log(change);
       } else {
         percChange.style.color = "rgb(93, 192, 93)";
       }
@@ -49,7 +45,6 @@ function fetchHistory() {
       }
       let reverse = array.reverse();
       let arrayClose = [];
-
       for (let i = 0; i < 12; i++) {
         let close = data.historical[i * 30].close;
         arrayClose.push(close);
@@ -63,12 +58,11 @@ function fetchHistory() {
             {
               label: "Stock Price History",
               backgroundColor: "darkgrey",
-              borderColor: "rgb(49, 155, 182)",
+              borderColor: "rgb(85, 83, 83)",
               data: arrayClose,
             },
           ],
         },
-
         options: {},
       });
     });
