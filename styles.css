@@ -4,16 +4,16 @@ body {
 
 li {
   list-style: none;
-  padding: 3px;
+  padding: 4px;
   color: black;
 }
 
 
 .container {
-  width: 470px;
-  height: 450px;
+  height: fit-content;
   background-color: rgb(207, 202, 202);
   box-shadow: 10px 10px 5px rgb(53, 52, 52);
+  width: fit-content;
 }
 
 .searchBar {
