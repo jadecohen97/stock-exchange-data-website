@@ -15,7 +15,7 @@ function fetchResults() {
   fetch(serverURL)
     .then((response) => response.json())
     .then((data) => {
-      hideSpinner()
+      hideSpinner();
       while (resultList.childElementCount > 0) {
         resultList.removeChild(resultList.lastChild);
       }

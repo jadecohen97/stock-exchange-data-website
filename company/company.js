@@ -25,7 +25,6 @@ function fetchProfile() {
       const percChange = document.getElementById("percChange");
       let change = data.profile.changesPercentage;
       percChange.innerHTML = change;
-
       if (change.includes("-")) {
         percChange.style.color = "red";
       } else {
