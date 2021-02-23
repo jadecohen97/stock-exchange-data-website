@@ -24,7 +24,6 @@ function fetchResults() {
         fetch(profileApi)
           .then((res) => res.json())
           .then((da) => {
-            console.log(da.profile);
             let img = `<img src = "${da.profile.image}" style ="width:20px; height:20px">`;
             let a = document.createElement("a");
             resultList.appendChild(a);
