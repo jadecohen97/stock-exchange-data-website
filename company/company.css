@@ -6,7 +6,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid rgb(75, 73, 73); */
   background-color: rgb(67, 67, 68);
   color: white;
   font-size: 24px;
@@ -37,4 +36,12 @@ body{
 #percChange{
     margin-left: 0.5vw;
     font-weight: bold;
+}
+
+.chart-container{
+    position: relative; 
+    height:60vh; 
+    width:60vw;
+    margin: auto;
+  
 }
