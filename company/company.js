@@ -6,7 +6,6 @@ const stockPrice = document.getElementById("stockPrice");
 
 const urlParams = new URLSearchParams(window.location.search);
 let symbol = urlParams.get("symbol");
-console.log(symbol);
 
 function fetchProfile() {
   let url = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/${symbol}`;
@@ -44,7 +43,6 @@ function fetchHistory() {
     .then((response) => response.json())
     .then((data) => {
       let array = [];
-
       for (let i = 0; i < 12; i++) {
         let dates = data.historical[i * 30].date;
         array.push(dates);
@@ -56,11 +54,9 @@ function fetchHistory() {
         let close = data.historical[i * 30].close;
         arrayClose.push(close);
       }
-
       var ctx = document.getElementById("myChart").getContext("2d");
       var chart = new Chart(ctx, {
         type: "line",
-
         data: {
           labels: reverse,
           datasets: [
