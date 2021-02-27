@@ -19,9 +19,17 @@ li {
   width: fit-content;
 }
 
+h3{
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+  color: rgb(66, 65, 65);
+  padding-top: 10px;
+}
+
 .searchBar {
   display: flex;
-  margin-top: 8vh;
+  margin-top: 3vh;
   align-items: center;
   justify-content: center;
   padding-top: 5px;
@@ -53,12 +61,10 @@ a:hover {
 }
 .marquee {
   height: 25px;
-
-  background-color: white;
   overflow: hidden;
-  position: relative;
+  display: inline-block;
   box-sizing: border-box;
-  animation: marquee 120s linear infinite;
+  animation: marquee 100s infinite linear;
   width: max-content;
 }
 .wrapper {
@@ -68,9 +74,7 @@ a:hover {
 .marquee span {
   display: inline-block;
   width: max-content;
-  margin-left: 2vw;
-  margin-right: 2vh;
-  will-change: transform;
+  margin-left: 1vw;
 }
 
 @keyframes marquee {
@@ -86,3 +90,4 @@ a:hover {
 .priceSpan {
   color: green;
 }
+
