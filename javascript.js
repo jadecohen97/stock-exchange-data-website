@@ -29,26 +29,6 @@ function fetchResults() {
             resultList.appendChild(a);
 
             a.innerHTML = `${img} ${data[i].name} (${data[i].symbol}) <span class = "changes"> ${da.profile.changesPercentage}</span>`;
-            
-
-            // let stockChanges = da.profile.changesPercentage;
-
-            // if (stockChanges.includes("-")) {
-            //   stockChanges.style.color = "green";
-            // } else {
-            //   stockChanges.style.color = "red";
-            // }
-
-            // const changes = document.querySelector(".changes");
-            // console.log(change.length);
-            // // for (let v = 0 ; v < change.length; v++){
-            // if (change.includes("-")) {
-            //   changes.style.color = "red";
-            // } else {
-            //   changes.style.color = "rgb(93, 192, 93)";
-            // }
-            // }
-
             a.setAttribute(
               "href",
               `/company/company.html?symbol=${data[i].symbol}`
@@ -64,23 +44,21 @@ function fetchResults() {
 
 const marquee = document.querySelector(".marquee");
 function fetchCurrentPrice() {
-  let priceAPI = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com//api/v3/actives`
+  let priceAPI = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com//api/v3/actives`;
   fetch(priceAPI)
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < data.length; i++) {
-      console.log(data[i]);
-      const span = document.createElement("span");
-      span.classList.add("spans");
-      span.innerHTML = data[i].ticker;
-      marquee.appendChild(span);
-      const priceSpan = document.createElement("span");
-      priceSpan.classList.add("priceSpan");
-      priceSpan.innerHTML = `$${data[i].price}`;
-      marquee.appendChild(priceSpan);
-
-
+        console.log(data[i]);
+        const span = document.createElement("span");
+        span.classList.add("spans");
+        span.innerHTML = data[i].ticker;
+        marquee.appendChild(span);
+        const priceSpan = document.createElement("span");
+        priceSpan.classList.add("priceSpan");
+        priceSpan.innerHTML = `$${data[i].price}`;
+        marquee.appendChild(priceSpan);
       }
     });
-  }
+}
 fetchCurrentPrice();
