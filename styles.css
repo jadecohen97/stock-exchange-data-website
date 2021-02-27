@@ -1,3 +1,7 @@
+/* *{
+  border: 1px solid red;
+} */
+
 body {
   background-color: rgb(161, 160, 160);
 }
@@ -7,7 +11,6 @@ li {
   padding: 4px;
   color: black;
 }
-
 
 .container {
   height: fit-content;
@@ -40,11 +43,46 @@ a {
   color: black;
 }
 
-a:hover{
+a:hover {
   color: rgb(206, 50, 50);
 }
 
 #button {
   width: 100px;
   border: 2px solid rgb(94, 92, 92);
+}
+.marquee {
+  height: 25px;
+
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  animation: marquee 120s linear infinite;
+  width: max-content;
+}
+.wrapper {
+  background-color: white;
+}
+
+.marquee span {
+  display: inline-block;
+  width: max-content;
+  margin-left: 2vw;
+  margin-right: 2vh;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+
+.priceSpan {
+  color: green;
 }

@@ -11,15 +11,23 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="stock-exchange-app.png"/>
   </head>
   <body>
+    <div class="wrapper">
+    <div class="marquee">
+    </div>
+    </div>
     <div class="container">
       <div class="searchBar">
         <input type="search" id="input" />
         <button id="button">search</button>
       </div>
+      <div class="text-center">
+      <div id="spinner" role="status"></div>
+    </div>
       <div class="results">
-        <div id="spinner" role="status"></div>
+        
         <ul id="resultList"></ul>
       </div>
     </div>

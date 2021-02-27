@@ -69,3 +69,5 @@ function fetchHistory() {
 
 fetchProfile();
 fetchHistory();
+
+
