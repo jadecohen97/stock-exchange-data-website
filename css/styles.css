@@ -30,7 +30,6 @@ h3 {
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
- 
 }
 a:hover {
   color: rgb(245, 241, 241);
@@ -65,7 +64,7 @@ a:hover {
 .priceSpan {
   color: #2ecc71;
 }
-.spans{
+.spans {
   color: white;
 }
 img {
