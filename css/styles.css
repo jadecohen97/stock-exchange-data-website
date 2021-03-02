@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(129, 129, 129);
+  background-color: rgb(39, 39, 39);
 }
 li {
   list-style: none;
@@ -10,7 +10,7 @@ li {
   display: flex;
   flex-direction: column;
   background-color: rgb(185, 181, 181);
-  box-shadow: 10px 10px 5px rgb(53, 52, 52);
+  box-shadow: 10px 10px 5px rgb(2, 7, 34);
   width: fit-content;
   justify-content: center;
   margin-top: 4vh;
@@ -41,7 +41,7 @@ a:hover {
   border-radius: 0%;
 }
 .wrapper {
-  background-color: rgb(90, 88, 88);
+  background-color: rgb(0, 0, 0);
   height: 30px;
   overflow: hidden;
 }
@@ -64,6 +64,9 @@ a:hover {
 }
 .priceSpan {
   color: #2ecc71;
+}
+.spans{
+  color: white;
 }
 img {
   margin-right: 0.5vw;

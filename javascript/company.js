@@ -58,8 +58,8 @@ function fetchHistory() {
           datasets: [
             {
               label: "Stock Price History",
-              backgroundColor: "darkgrey",
-              borderColor: "rgb(85, 83, 83)",
+              backgroundColor: "rgb(150, 148, 148)",
+              borderColor: "black",
               data: arrayClose,
             },
           ],
@@ -70,3 +70,5 @@ function fetchHistory() {
 }
 fetchProfile();
 fetchHistory();
+
+
