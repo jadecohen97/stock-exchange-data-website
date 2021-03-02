@@ -4,12 +4,14 @@ const description = document.getElementById("description");
 const webLink = document.getElementById("webLink");
 const stockPrice = document.getElementById("stockPrice");
 const urlParams = new URLSearchParams(window.location.search);
-let symbol = urlParams.get("symbol");
+const title = document.getElementById("title");
+const symbol = urlParams.get("symbol");
 function fetchProfile() {
   let url = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/${symbol}`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      title.innerHTML = data.profile.companyName;
       companyName.innerHTML = data.profile.companyName;
       const img = document.createElement("img");
       img.src = data.profile.image;
@@ -26,9 +28,9 @@ function fetchProfile() {
       let change = data.profile.changesPercentage;
       percChange.innerHTML = change;
       if (change.includes("-")) {
-        percChange.style.color = "red";
+        percChange.style.color = "#e74c3c";
       } else {
-        percChange.style.color = "rgb(93, 192, 93)";
+        percChange.style.color = "#2ecc71";
       }
     });
 }
@@ -48,8 +50,8 @@ function fetchHistory() {
         let close = data.historical[i * 30].close;
         arrayClose.push(close);
       }
-      var ctx = document.getElementById("myChart").getContext("2d");
-      var chart = new Chart(ctx, {
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const chart = new Chart(ctx, {
         type: "line",
         data: {
           labels: reverse,
@@ -66,8 +68,5 @@ function fetchHistory() {
       });
     });
 }
-
 fetchProfile();
 fetchHistory();
-
-

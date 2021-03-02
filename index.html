@@ -10,30 +10,26 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="stock-exchange-app.png"/>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" type="image/png" href="stock-exchange-app.png" />
   </head>
   <body>
-    <div class="wrapper">
-    <div class="marquee">
-    </div>
-    </div>
-   
-    <div class="container">
-      <h3>Search Nasdaq Stock</h3>
-      <div class="searchBar">
-        <input type="search" id="input" placeholder="search for company stock symbol"/>
-        <button id="button">search</button>
+    <div class="page-wrapper">
+      <div class="wrapper">
+        <div class="marquee"></div>
       </div>
-      <div class="text-center">
-      <div id="spinner" role="status"></div>
-    </div>
-      <div class="results">
-        
+      <div class="container">
+        <h3>Search Nasdaq Stocks</h3>
+        <div class="searchBar"></div>
+        <div class="text-center">
+          <div id="spinner" role="status"></div>
+        </div>
         <ul id="resultList"></ul>
       </div>
     </div>
-    <script src="./marquee.js"></script>
-    <script src="javascript.js"></script>
+    <script src="./javascript/searchForm.js"></script>
+    <script src="./javascript/marquee.js"></script>
+    <script src="./javascript/searchResult.js"></script>
+    <script src="./javascript/javascript.js"></script>
   </body>
 </html>

@@ -1,0 +1,83 @@
+body {
+  background-color: rgb(129, 129, 129);
+}
+li {
+  list-style: none;
+  padding: 8px;
+  color: black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(185, 181, 181);
+  box-shadow: 10px 10px 5px rgb(53, 52, 52);
+  width: fit-content;
+  justify-content: center;
+  margin-top: 4vh;
+  align-items: center;
+}
+h3 {
+  color: rgb(66, 65, 65);
+  padding-top: 20px;
+}
+.searchBar {
+  padding-top: 15px;
+  display: inline-flex;
+}
+#input {
+  width: 450px;
+}
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+ 
+}
+a:hover {
+  color: rgb(245, 241, 241);
+}
+#button {
+  width: 100px;
+  border: 2px solid rgb(112, 111, 111);
+  border-radius: 0%;
+}
+.wrapper {
+  background-color: rgb(90, 88, 88);
+  height: 30px;
+  overflow: hidden;
+}
+.marquee {
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 40s linear infinite;
+  padding: 2px;
+}
+.marquee span {
+  margin-left: 0.5vw;
+}
+@keyframes marquee {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+.priceSpan {
+  color: #2ecc71;
+}
+img {
+  margin-right: 0.5vw;
+  width: 25px;
+  height: 25px;
+}
+.positive {
+  color: #4da170;
+}
+.negative {
+  color: #e74c3c;
+}
+.mark,
+mark {
+  padding: 0;
+  background-color: rgb(252, 248, 248);
+}
